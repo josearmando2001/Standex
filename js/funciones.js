@@ -47,7 +47,6 @@ function ListarClientes() {
     fetch("databases/listar.php", {})
         .then(response => response.json())
         .then(response => {
-            console.log(response);
             $("#resultado").empty(); // Vaciar el contenido actual antes de agregar los nuevos datos
             rows = response.map(cliente => [
                 cliente.id,
@@ -123,7 +122,6 @@ function editardatos(event) {
             method: "POST",
             body: new FormData(formulario)
         }).then(response => response.json()).then(response => {
-            console.log(response)
             if (response.success === true) {
                 // Si la edición es correcta envia una alerta, remueve las clases y resetea el formulario 
                 alerta('success', response.message);

@@ -4,5 +4,5 @@ RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 # Ruta home de acceso para el index.php
 RewriteRule ^home/?$ index.php
-# Ruta consulta-clientes de acceso para el archivo templates/consulta.php
-RewriteRule ^consulta-clientes/?$ templates/consulta.php
+# Ruta consulta-clientes de acceso para el archivo consulta.php
+RewriteRule ^consulta-clientes/?$ consulta.php

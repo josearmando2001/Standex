@@ -7,4 +7,3 @@
         Designed by <a href="#">BootstrapMade</a>
     </div>
 </footer>
-<!-- End Footer -->

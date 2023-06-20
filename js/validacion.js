@@ -55,6 +55,31 @@ const validarCampo = (expresion, input, campo) => {
     }
 
 }
+// Validación con libreria Jquery Validator
+$(document).ready(function () {
+    $('#formulario').validate({
+        rules: {
+            nombre: {
+                required: true,
+            },
+            fecha_nacimiento: {
+                required: true
+            },
+            numero_tarjeta: {
+                required: true,
+            },
+            url_youtube: {
+                required: true,
+            },
+        },
+        errorElement: "p",
+        errorPlacement: function (error, element) {
+            error.addClass("text-danger");
+            error.insertAfter(element);
+        },
+    });
+});
+
 
 // registro de cliente
 function registrar(event) {
